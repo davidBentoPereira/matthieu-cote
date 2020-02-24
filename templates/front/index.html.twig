@@ -1,0 +1,36 @@
+{% extends 'front/base.html.twig' %}
+{% set page = 'index' %}
+{% block title %}Accueil{% endblock %}
+
+{% block body %}
+    <div class="row mb-4">
+        <div class="col-12">
+            <h1 class="text-center" id="main_title">Ceci n'est pas le <span id="main_title_emphisised">site</span> de Matthieu Côte</h1>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-4">
+            <img src="{{ asset('img/matthieu_cote_img_1.jpg') }}" class="img-fluid rounded" alt="Matthieu Côte">
+        </div>
+
+        <div class="col-8">
+            <p>
+                Le nom peut ne rien vous évoquer. Si le bon dieu l’avait voulu, il mangerait déjà dans l’écuelle des grands de la chanson. Le sort et un cœur capricieux en ont décidé autrement. C’était il y a pile cinq ans, un 26 septembre, une vie qu’on débranche…
+                C’était le lyonnais Matthieu Côte : tous ceux qui l’ont connu vous diront encore l’incroyable talent de ce jeune gars.
+                Parce que pas assez connu, son nom n’est pas dans le flot des commémorations : raison de plus, ce jour anniversaire,
+                de le rappeler à notre mémoire, de vous dire qu’il fut. Comme le font encore et toujours ses copains chanteurs, eux qui ont
+                en permanence un Côte du Rhône à ajouter à leurs vers : les Carmen Maria Vega, Stéphane Balmino, Evelyne Gallet, Cédric et autres encore…
+            </p>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col-12">
+            <p>
+                Je développe et maintient bénévolement ce site internet pour rendre hommage à ce fabuleux chanteur. Ici le but est d'amasser et de réunir chansons, articles, vidéos et photos afin de le partager au plus grand nombre et de continuer à le faire vivre à travers nos mémoires.
+                Pour faire un geste, vous pouvez partagez ce site sur les réseaux sociaux et téléchargez ses album sur Bandcamp (gratuitement, ou en payant ce que vous voulez, l'argent sera reversé à des projets artistiques). Ses chansons doivent être écouter et vivre. Alors régalez vous !
+            </p>
+        </div>
+    </div>
+{% endblock %}

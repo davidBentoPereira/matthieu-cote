@@ -1,0 +1,61 @@
+body {
+    background-color: #171D24;
+}
+
+/*********** NAVBAR ***********/
+.bg-dark-custom {
+    background-color: #2B3443;
+}
+
+.nav-link {
+    color: white !important;
+}
+
+.nav-link:hover {
+    color: #FFBB51 !important;
+    text-shadow: #FFBB51 2px 2px 2px;
+}
+
+.nav-link:active {
+    color: #FFBB51 !important;
+    text-shadow: #FFBB51 2px 2px 2px;
+}
+
+/*********** MAIN TITLE ***********/
+#main_title {
+    color: white;
+}
+
+#main_title_emphisised {
+    color: #FFBB51;
+}
+
+/*********** GENERAL ***********/
+h1, h2, h3, h4, h5, h6 {
+    color:white;
+    font-family: "Roboto Light", sans-serif
+}
+
+p {
+    color: white;
+    font-family: Roboto, sans-serif
+}
+
+a {
+    color: white;
+
+}
+
+a:hover {
+    color: #FFBB51;
+    text-shadow: #FFBB51 2px 2px 2px;
+    text-decoration: none;
+}
+
+.page-footer {
+    background-color: #2B3443;
+}
+
+.footer-copyright p {
+    font-size: 0.8em;
+}

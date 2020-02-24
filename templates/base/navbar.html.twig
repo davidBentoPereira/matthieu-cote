@@ -1,0 +1,17 @@
+<nav class="navbar navbar-expand-lg navbar-light fixed-top bg-dark-custom">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-md-center" id="navbarNavAltMarkup">
+        <div class="navbar-nav ">
+            <a class="nav-item nav-link active" href="{{ path('front_index') }}">{{ 'Accueil'|upper }} <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="{{ path('front_discographie') }}">{{ 'Discographie'|upper }}</a>
+            <a class="nav-item nav-link" href="{{ path('front_biographie') }}">{{ 'Biographie'|upper }}</a>
+            <a class="nav-item nav-link" href="{{ path('front_videos') }}">{{ 'Vidéos'|upper }}</a>
+            <a class="nav-item nav-link" href="{{ path('front_photos') }}">{{ 'Photos'|upper }}</a>
+            <a class="nav-item nav-link" href="{{ path('front_articles') }}">{{ 'Articles'|upper }}</a>
+            <a class="nav-item nav-link" href="{{ path('front_actualites') }}">{{ 'Actualités'|upper }}</a>
+            <a class="nav-item nav-link" href="{{ path('front_tablatures') }}">{{ 'Tablatures'|upper }}</a>
+        </div>
+    </div>
+</nav>
