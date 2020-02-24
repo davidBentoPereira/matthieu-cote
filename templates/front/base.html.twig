@@ -10,13 +10,22 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <!-- Custom CSS -->
+    <link href="{{ asset('admin/css/sb-admin-2.min.css') }}" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}">
     {% block stylesheets %}{% endblock %}
 </head>
 <body>
 {% include 'base/navbar.html.twig' %}
+
 <div class="container-fluid px-5">
-    {% include 'base/header_title.html.twig' %}
+    <div class="row">
+        <div class="col-12">
+            <h1 class="text-center">
+                {% block h1_title %}{% endblock %}
+            </h1>
+        </div>
+    </div>
+
     {% block body %}{% endblock %}
 </div>
 {% include 'base/footer.html.twig' %}

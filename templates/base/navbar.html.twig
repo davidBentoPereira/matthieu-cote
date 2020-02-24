@@ -3,15 +3,15 @@
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse justify-content-md-center" id="navbarNavAltMarkup">
-        <div class="navbar-nav ">
-            <a class="nav-item nav-link active" href="{{ path('front_index') }}">{{ 'Accueil'|upper }} <span class="sr-only">(current)</span></a>
-            <a class="nav-item nav-link" href="{{ path('front_discographie') }}">{{ 'Discographie'|upper }}</a>
-            <a class="nav-item nav-link" href="{{ path('front_biographie') }}">{{ 'Biographie'|upper }}</a>
-            <a class="nav-item nav-link" href="{{ path('front_videos') }}">{{ 'Vidéos'|upper }}</a>
-            <a class="nav-item nav-link" href="{{ path('front_photos') }}">{{ 'Photos'|upper }}</a>
-            <a class="nav-item nav-link" href="{{ path('front_articles') }}">{{ 'Articles'|upper }}</a>
-            <a class="nav-item nav-link" href="{{ path('front_actualites') }}">{{ 'Actualités'|upper }}</a>
-            <a class="nav-item nav-link" href="{{ path('front_tablatures') }}">{{ 'Tablatures'|upper }}</a>
+        <div class="navbar-nav justify-content-between">
+            <a class="nav-item nav-link {% if page == 'index' %}active{% endif %}" href="{{ path('front_index') }}">{{ 'Accueil'|upper }} <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link {% if page == 'discographie' %}active{% endif %}" href="{{ path('front_discographie') }}">{{ 'Discographie'|upper }}</a>
+            <a class="nav-item nav-link {% if page == 'biographie' %}active{% endif %}" href="{{ path('front_biographie') }}">{{ 'Biographie'|upper }}</a>
+            <a class="nav-item nav-link {% if page == 'videos' %}active{% endif %}" href="{{ path('front_videos') }}">{{ 'Vidéos'|upper }}</a>
+            <a class="nav-item nav-link {% if page == 'photos' %}active{% endif %}" href="{{ path('front_photos') }}">{{ 'Photos'|upper }}</a>
+            <a class="nav-item nav-link {% if page == 'articles' %}active{% endif %}" href="{{ path('front_articles') }}">{{ 'Articles'|upper }}</a>
+            <a class="nav-item nav-link {% if page == 'actualites' %}active{% endif %}" href="{{ path('front_actualites') }}">{{ 'Actualités'|upper }}</a>
+            <a class="nav-item nav-link {% if page == 'tablatures' %}active{% endif %}" href="{{ path('front_tablatures') }}">{{ 'Tablatures'|upper }}</a>
         </div>
     </div>
 </nav>
