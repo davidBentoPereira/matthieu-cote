@@ -2,7 +2,131 @@
 {% set page = 'discographie' %}
 {% block title %}Discographie{% endblock %}
 {% block h1_title %}Ceci n'est pas la <span id="main_title_emphisised">discographie</span> de Matthieu Côte{% endblock %}
-
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/amplitudejs.css') }}">
+{% endblock %}
 {% block body %}
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-5">
+                <div class="row justify-content-center">
+                    <img data-amplitude-song-info="cover_art_url" class="img-fluid rounded album-art" alt="Album Matthieu Côte" width="300px"/>
+                </div>
+                <div class="row justify-content-center">
+                    <p class="" data-amplitude-song-info="name"></p>
+                </div>
+                <!-- Audio Controls -->
+                <div class="row justify-content-center mb-3">
+                    <div class="audio-controls">
+                        <button class="btn btn-outline-warning btn-circle amplitude-prev"><i class="fas fa-step-backward"></i></button>
+                        <button class="btn btn-outline-warning btn-circle amplitude-play btn-play"><i class="fas fa-play"></i></button>
+                        <button class="btn btn-outline-warning btn-circle amplitude-pause btn-pause"><i class="fas fa-pause"></i></button>
+                        <button class="btn btn-outline-warning btn-circle amplitude-next"><i class="fas fa-step-forward"></i></button>
+                    </div>
+                </div>
+                <!-- Slider Song Bar  -->
+                <div class="row justify-content-center">
+                    <!-- Current time in song-->
+                    <span class="amplitude-current-time"></span>
+                    <!-- Slider Song Bar-->
+                    <input type="range" class="amplitude-song-slider progress-sm" step=".1"/>
+                    <div class="progress">
+                        <div class="progress-bar bg-success" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <!-- Song Duration -->
+                    <span class="amplitude-duration-time"></span>
+                </div>
+                <div class="row justify-content-center mt-2">
+                    <a href="https://matthieucote.bandcamp.com/album/matthieu-c-te" target="_blank">
+                        <button type="button" class="btn btn-outline-light rounded-pill">
+                            <i class="fab fa-bandcamp"></i>
+                            Ecouter et acheter sur Bandcamp
+                        </button>
+                    </a>
+                </div>
+            </div>
 
+            <div class="col-4">
+                <!-- Album Informations-->
+                <p class="album">ALBUM</p>
+                <p class="album-title" data-amplitude-song-info="album"></p>
+                <p>
+                    <span class="secondary">Par</span>
+                    <span class="album-author" data-amplitude-song-info="artist"></span>
+                </p>
+                <p class="secondary album-info">53 min - 13 chansons - Septembre 2006</p>
+                <!-- Album Informations-->
+                <!-- Songs List -->
+                <ul class="list-songs">
+                    <li class="song amplitude-song-container amplitude-play-pause" data-amplitude-song-index="0">
+                        {#                        <i class="fas fa-play mr-2 icon-play"></i>#}
+                        {#                        <i class="fas fa-pause mr-2 icon-pause"></i>#}
+                        <div class="song-now-playing-icon-container">
+                            <div class="play-button-container">
+
+                            </div>
+                            <img class="now-playing" src="https://521dimensions.com/img/open-source/amplitudejs/blue-player/now-playing.svg"/>
+                        </div>
+                        <span class="song-number">01</span>
+                        Etudiante en lettre
+                    </li>
+                    <li class="song amplitude-song-container amplitude-play-pause" data-amplitude-song-index="1">
+                        <span class="song-number">02</span>
+                        La mère de l'Officier
+                    </li>
+                    <li class="song amplitude-song-container amplitude-play-pause" data-amplitude-song-index="2">
+                        <span class="song-number">03</span>
+                        Tendre
+                    </li>
+                    <li class="song amplitude-song-container amplitude-play-pause" data-amplitude-song-index="3">
+                        <span class="song-number">04</span>
+                        Liège
+                    </li>
+                    <li class="song amplitude-song-container amplitude-play-pause" data-amplitude-song-index="4">
+                        <span class="song-number">05</span>
+                        Le rêve américain
+                    </li>
+                    <li class="song amplitude-song-container amplitude-play-pause" data-amplitude-song-index="5">
+                        <span class="song-number">06</span>
+                        Le Sarong
+                    </li>
+                    <li class="song amplitude-song-container amplitude-play-pause" data-amplitude-song-index="6">
+                        <span class="song-number">07</span>
+                        Ma meilleure amie
+                    </li>
+                    <li class="song amplitude-song-container amplitude-play-pause" data-amplitude-song-index="7">
+                        <span class="song-number">08</span>
+                        Si les vaches avaient des ailes
+                    </li>
+                    <li class="song amplitude-song-container amplitude-play-pause" data-amplitude-song-index="8">
+                        <span class="song-number">09</span>
+                        Ravissante môme
+                    </li>
+                    <li class="song amplitude-song-container amplitude-play-pause" data-amplitude-song-index="9">
+                        <span class="song-number">10</span>
+                        Le soldat en bouffon
+                    </li>
+                    <li class="song amplitude-song-container amplitude-play-pause" data-amplitude-song-index="10">
+                        <span class="song-number">11</span>
+                        Potache
+                    </li>
+                    <li class="song amplitude-song-container amplitude-play-pause" data-amplitude-song-index="11">
+                        <span class="song-number">12</span>
+                        Quéquette
+                    </li>
+                    <li class="song amplitude-song-container amplitude-play-pause" data-amplitude-song-index="12">
+                        <span class="song-number">13</span>
+                        Tu as 20 ans
+                    </li>
+                </ul>
+                <!-- Songs List -->
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block javascripts %}
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/amplitudejs@5.0.3/dist/amplitude.js"></script>
+    <script src="{{ asset('js/amplitude.js') }}"></script>
 {% endblock %}

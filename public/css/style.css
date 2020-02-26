@@ -1,43 +1,31 @@
 body {
     background-color: #171D24;
+    /*background: -webkit-linear-gradient(#171D24, #86a6db);*/
+    /*-webkit-background-clip: text;*/
+    /*!*-webkit-text-fill-color: transparent;*!*/
 }
 
 /*********** NAVBAR ***********/
-.bg-dark-custom {
-    background-color: #2B3443;
-}
-
+.bg-dark-custom {background-color: #2B3443; border-radius: 0px 0px 5px 5px}
 .navbar-light .navbar-nav .nav-link {
     color: white;
     font-family: "Roboto Light", sans-serif;
 }
-
 .navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
     color: #FFBB51;
-    text-shadow: #FFBB51 2px 2px 2px;
+    text-shadow: #000000 2px 10px 15px;
 }
-
 .navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show > .nav-link {
     color: #FFBB51;
-    text-shadow: #FFBB51 2px 2px 2px;
+    text-shadow: #000000 2px 10px 15px;
 }
-
 /*********** MAIN TITLE ***********/
-#main_title {
-    color: white;
-}
-
-#main_title_emphisised {
-    color: #FFBB51;
-}
+#main_title_emphisised {color: #FFBB51;}
 
 /*********** GENERAL ***********/
+p, li {color: white;font-family: Roboto, sans-serif}
 h1, h2, h3, h4, h5, h6 {color:white; font-family: "Roboto Light", sans-serif}
-h1 {
-    margin-top: 2em;
-    margin-bottom: 1em;
-}
-p {color: white;font-family: Roboto, sans-serif}
+h1 {margin-top: 2em; margin-bottom: 1em;}
 a {color: white;}
 a:hover {color: #FFBB51; text-shadow: #FFBB51 2px 2px 2px; text-decoration: none;}
 
@@ -47,7 +35,45 @@ footer {
     position:absolute;
     bottom:0;
     width:100%;
-    height:90px;   /* Height of the footer */
+    height:100px;   /* Height of the footer */
 }
 .footer-copyright p {font-size: 0.8em;}
-.btn-footer {border-radius: 20px;}
+.corner-round {border-radius: 20px;}
+
+/************ DISCOGRAPHIE ************/
+.song-number {margin-right: 2em;}
+.album {color: #FFBB51; font-family: Roboto, sans-serif}
+.album-title {font-family: Roboto, sans-serif; font-size: 2em; margin-top: -0.5em; margin-bottom:0em;}
+.album-info {margin-top: -0.5em;}
+.secondary {font-family: Roboto, sans-serif; color: white; opacity: 50%;}
+.list-songs { list-style-type: none; padding: 0; line-height: 2.5em;}
+.list-songs li:hover {cursor: pointer;}
+.amplitude-active-song-container  {
+    background-color: #FFBB51;
+    color: #171D24;
+    border-radius: 20px;
+    padding: 0.2em 0.2em 0.2em 1.5em;
+    cursor: pointer;
+}
+
+
+/************* Amplitude JS **************/
+/* BTN AUDIO CONTROL */
+.audio-controls {
+    background-color:#2B3443;
+    border-radius: 20px;
+    padding:1em;
+}
+
+.icon-play {
+    display: none;
+}
+.icon-pause {
+    display: none;
+}
+.btn-repeat:active{
+    background-color:red;
+}
+.btn-pause {
+    display: none;
+}
