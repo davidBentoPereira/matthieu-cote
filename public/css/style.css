@@ -74,6 +74,8 @@ footer {
 .btn-repeat:active{
     background-color:red;
 }
-.btn-pause {
-    display: none;
-}
+
+/*#play-pause.amplitude-paused {*/
+/*    background: url("https://521dimensions.com/img/open-source/amplitudejs/blue-player/play.svg"); }*/
+/*#play-pause.amplitude-playing {*/
+/*    background: url("https://521dimensions.com/img/open-source/amplitudejs/blue-player/pause.svg"); }*/

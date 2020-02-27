@@ -151,22 +151,20 @@ Amplitude.init({
         }
     ],
 });
-// document.getElementById('large-visualization').style.height = document.getElementById('album-art').offsetWidth + 'px';
-
-
 
 /*
     Show and hide the play or the pause button depending on which one is clicked
 */
+/*
 let playButton = document.getElementsByClassName('btn-play');
 let pauseButton = document.getElementsByClassName('btn-pause');
 
 playButton[0].addEventListener('click', function(){
     playButton[0].style.display = 'none';
-    pauseButton[0].style.display = 'block';
+    pauseButton[0].style.display = 'inline';
 });
 
 pauseButton[0].addEventListener('click', function(){
-    playButton[0].style.display = '';
+    playButton[0].style.display = 'inline';
     pauseButton[0].style.display = 'none';
-});
+});*/
