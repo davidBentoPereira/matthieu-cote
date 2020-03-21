@@ -3,18 +3,27 @@
 {% block title %}Photos{% endblock %}
 {% block h1_title %}Ce ne sont pas des <span id="main_title_emphisised">photos</span> de Matthieu Côte{% endblock %}
 {% block stylesheets %}
+    {{ parent() }}
     <link rel="stylesheet" href="assets/natural-gallery-js/natural-gallery.css">
     <link rel="stylesheet" href="{{ asset('@natural-gallery-js/natural-gallery.css') }}">
     <link rel="stylesheet" href="assets/natural-gallery-js/themes/natural.css">
 {% endblock %}
 {% block body %}
 
+<div class="row">
+    <div class="col-8" id="gallery">
 
+    
+
+    </div>
+</div>
 
 
 {% endblock %}
 
 {% block javascripts %}
+    {{ parent() }}
+
     <script src="{{ asset('material-photo-gallery/dist/js/material-photo-gallery.min.js') }}"></script>
 
     <script>

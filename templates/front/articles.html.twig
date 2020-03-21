@@ -1,7 +1,40 @@
 {% extends 'front/base.html.twig' %}
 {% set page = 'articles' %}
-{% block title %}Articles{% endblock %}
-{% block h1_title %}Ce ne sont pas des <span id="main_title_emphisised">articles</span> de Matthieu Côte{% endblock %}
+{% block title %}Articles
+{% endblock %}
+{% block h1_title %}Ce ne sont pas des
+	<span id="main_title_emphisised">articles</span>
+	de Matthieu Côte
+{% endblock %}
 {% block body %}
 
+	<div class="card-deck">
+		{% for i in range(1, 4) %}
+
+			<div class="card">
+				<img src="{{ asset('img/matthieu_cote_face.jpg') }}" class="card-img-top" alt="...">
+				<div class="card-body">
+                    <hr></hr>
+                    <h5 class="card-title">A fleur de mot</h5>
+                    <p class="card-text">
+                    {{ "Matthieu côte est un mécréant.
+                     Un auteur compositeur interprète qui dit, chante des mots, des gros mots. Mais, à sa défense, ce sont des mots (gros) que l’on trouve dans n’importe quel dictionnaire de la langue française. Gros mots, petit Robert...Matthieu côte est un farfadet qui bondit, gigote sur scène. C’est un garçon qui bouge bien. C’est un farfadet avec des lunettes et une clarinette (à la main et/ ou à la bouche). Pas de Pan, la flûte, même si de ce dieu il possède les petits pieds fourchus lui permettant de poursuivre et lutiner les filles. Et toujours à se titiller l’instrument...Sacré gaillard qui jongle avec l’ironie comme d’autres les assiettes chinoises. Dans ses chansons, l’humour est souvent présent. Là. Pas sous-jacent. Direct. Pas au premier degré. De l’humour comme chez les grands. Les grands auteurs. De la graine de vedette. Non pas la marque de machine à laver... De la graine de talent d’où va germer son futur artistique.
+                    "|slice(0, 195) }}...
+                     </p>
+                    <p class="card-text text-center">
+                        <small class="text-muted">Le samedi 21 mai 2005 - Par Roland G. Bougain</small>
+                    </p>                    
+                    <div class="row justify-content-center">
+                        <div class="">
+                            <button type="button" class="btn btn-outline-warning rounded-pill">
+                                Lire l'article
+                                <i class="fas fa-long-arrow-alt-right"></i>
+                            </button>
+                        </div>
+                    </div>
+			    </div>
+		    </div>
+        
+	    {% endfor %}
+    </div>
 {% endblock %}

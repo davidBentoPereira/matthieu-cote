@@ -3,6 +3,7 @@
 {% block title %}Discographie{% endblock %}
 {% block h1_title %}Ceci n'est pas la <span id="main_title_emphisised">discographie</span> de Matthieu Côte{% endblock %}
 {% block stylesheets %}
+    {{ parent() }}
     <link rel="stylesheet" href="{{ asset('css/amplitudejs.css') }}">
 {% endblock %}
 {% block body %}
@@ -129,6 +130,7 @@
 {% endblock %}
 
 {% block javascripts %}
+    {{ parent() }}
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/amplitudejs@5.0.3/dist/amplitude.js"></script>
     <script src="{{ asset('js/amplitude.js') }}"></script>
 {% endblock %}

@@ -3,15 +3,19 @@
 @import "~@fortawesome/fontawesome-free/css/all.css";
 @import "~startbootstrap-sb-admin-2/scss/sb-admin-2";
 
-body {
+@import "~@ecodev/natural-gallery-js/natural-gallery.css";
+@import "~@ecodev/natural-gallery-js/themes/natural.css";
+
+#content {
     background-color: #171D24;
+    border-radius: 15px 15px 15px 15px
     /*background: -webkit-linear-gradient(#171D24, #86a6db);*/
     /*-webkit-background-clip: text;*/
     /*!*-webkit-text-fill-color: transparent;*!*/
 }
 
 /*********** NAVBAR ***********/
-.bg-dark-custom {background-color: #2B3443; border-radius: 0px 0px 5px 5px}
+.bg-dark-custom {background-color: #2B3443;}
 .navbar-light .navbar-nav .nav-link {
     color: white;
     font-family: "Roboto Light", sans-serif;
@@ -37,6 +41,7 @@ a:hover {color: #FFBB51; text-shadow: #FFBB51 2px 2px 2px; text-decoration: none
 /********** FOOTER ***********/
 footer {
     background-color: #2B3443;
+    border-radius: 15px 15px 0px 0px;
     position:absolute;
     bottom:0;
     width:100%;
@@ -61,12 +66,26 @@ footer {
     cursor: pointer;
 }
 
+/************* Cards **************/
+.card {
+    background-color: #2B3443;
+    border-radius: 50px;
+    border: none;
+}
+
+.card-img-top {
+    border-radius: 50px 50px 0px 0px;
+}
+
+hr {
+    background-color: white;
+}
 
 /************* Amplitude JS **************/
 /* BTN AUDIO CONTROL */
 .audio-controls {
     background-color:#2B3443;
-    border-radius: 20px;
+    border-radius: 15px;
     padding:1em;
 }
 
