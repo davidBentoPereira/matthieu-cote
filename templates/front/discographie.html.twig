@@ -9,16 +9,18 @@
 {% block body %}
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-5">
+            <div class="player col-5">
+                <!-- Album cover -->
                 <div class="row justify-content-center">
-                    <img data-amplitude-song-info="cover_art_url" class="img-fluid rounded album-art" alt="Album Matthieu Côte" width="300px"/>
+                    <img class="player__cover img-fluid rounded album-art" data-amplitude-song-info="cover_art_url" alt="Album Matthieu Côte"/>
                 </div>
+                <!-- Song name -->
                 <div class="row justify-content-center">
-                    <p class="" data-amplitude-song-info="name"></p>
+                    <p class="player__song-title" data-amplitude-song-info="name"></p>
                 </div>
                 <!-- Audio Controls -->
                 <div class="row justify-content-center mb-3">
-                    <div class="audio-controls">
+                    <div class="player__audio-controls">
                         <button class="btn btn-outline-warning btn-circle amplitude-prev"><i class="fas fa-step-backward"></i></button>
 {#                        <button class="btn btn-outline-warning btn-circle amplitude-play btn-play"><i class="fas fa-play"></i></button>#}
 {#                        <button class="btn btn-outline-warning btn-circle amplitude-pause btn-pause"><i class="fas fa-pause"></i></button>#}
@@ -28,7 +30,7 @@
                     </div>
                 </div>
                 <!-- Slider Song Bar  -->
-                <div class="row justify-content-center">
+                <div class="row justify-content-center align-content-center">
                     <!-- Current time in song-->
                     <span class="amplitude-current-time"></span>
                     <!-- Slider Song Bar-->
@@ -39,28 +41,22 @@
                     <!-- Song Duration -->
                     <span class="amplitude-duration-time"></span>
                 </div>
+                <!-- Btn Bandcamp-->
                 <div class="row justify-content-center mt-2">
-                    <a href="https://matthieucote.bandcamp.com/album/matthieu-c-te" target="_blank">
-                        <button type="button" class="btn btn-outline-light rounded-pill">
-                            <i class="fab fa-bandcamp"></i>
-                            Ecouter et acheter sur Bandcamp
-                        </button>
+                    <a href="https://matthieucote.bandcamp.com/album/matthieu-c-te" target="_blank" type="button" class="btn btn-outline-light rounded-pill">
+                        <i class="fab fa-bandcamp"></i> Ecouter et acheter sur Bandcamp
                     </a>
                 </div>
             </div>
 
-            <div class="col-4">
+            <div class="album col-4">
                 <!-- Album Informations-->
-                <p class="album">ALBUM</p>
-                <p class="album-title" data-amplitude-song-info="album"></p>
-                <p>
-                    <span class="secondary">Par</span>
-                    <span class="album-author" data-amplitude-song-info="artist"></span>
-                </p>
-                <p class="secondary album-info">53 min - 13 chansons - Septembre 2006</p>
-                <!-- Album Informations-->
+                <p class="album__label">ALBUM</p>
+                <p class="album__title" data-amplitude-song-info="album">Titre album</p>
+                <p><span class="text-muted">Par </span><span data-amplitude-song-info="artist">Nom artiste</span></p>
+                <p class="album__info text-muted">13 chansons - 53 min - Septembre 2006</p>
                 <!-- Songs List -->
-                <ul class="list-songs">
+                <ul class="album__songs">
                     <li class="song amplitude-song-container amplitude-play-pause" data-amplitude-song-index="0">
                         {#                        <i class="fas fa-play mr-2 icon-play"></i>#}
                         {#                        <i class="fas fa-pause mr-2 icon-pause"></i>#}
@@ -70,59 +66,58 @@
 {#                            </div>#}
 {#                            <img class="now-playing" src="https://521dimensions.com/img/open-source/amplitudejs/blue-player/now-playing.svg"/>#}
 {#                        </div>#}
-                        <span class="song-number">01</span>
+                        <span class="album__album__song-number">01</span>
                         Etudiante en lettre
                     </li>
                     <li class="song amplitude-song-container amplitude-play-pause" data-amplitude-song-index="1">
-                        <span class="song-number">02</span>
+                        <span class="album__song-number">02</span>
                         La mère de l'Officier
                     </li>
                     <li class="song amplitude-song-container amplitude-play-pause" data-amplitude-song-index="2">
-                        <span class="song-number">03</span>
+                        <span class="album__song-number">03</span>
                         Tendre
                     </li>
                     <li class="song amplitude-song-container amplitude-play-pause" data-amplitude-song-index="3">
-                        <span class="song-number">04</span>
+                        <span class="album__song-number">04</span>
                         Liège
                     </li>
                     <li class="song amplitude-song-container amplitude-play-pause" data-amplitude-song-index="4">
-                        <span class="song-number">05</span>
+                        <span class="album__song-number">05</span>
                         Le rêve américain
                     </li>
                     <li class="song amplitude-song-container amplitude-play-pause" data-amplitude-song-index="5">
-                        <span class="song-number">06</span>
+                        <span class="album__song-number">06</span>
                         Le Sarong
                     </li>
                     <li class="song amplitude-song-container amplitude-play-pause" data-amplitude-song-index="6">
-                        <span class="song-number">07</span>
+                        <span class="album__song-number">07</span>
                         Ma meilleure amie
                     </li>
                     <li class="song amplitude-song-container amplitude-play-pause" data-amplitude-song-index="7">
-                        <span class="song-number">08</span>
+                        <span class="album__song-number">08</span>
                         Si les vaches avaient des ailes
                     </li>
                     <li class="song amplitude-song-container amplitude-play-pause" data-amplitude-song-index="8">
-                        <span class="song-number">09</span>
+                        <span class="album__song-number">09</span>
                         Ravissante môme
                     </li>
                     <li class="song amplitude-song-container amplitude-play-pause" data-amplitude-song-index="9">
-                        <span class="song-number">10</span>
+                        <span class="album__song-number">10</span>
                         Le soldat en bouffon
                     </li>
                     <li class="song amplitude-song-container amplitude-play-pause" data-amplitude-song-index="10">
-                        <span class="song-number">11</span>
+                        <span class="album__song-number">11</span>
                         Potache
                     </li>
                     <li class="song amplitude-song-container amplitude-play-pause" data-amplitude-song-index="11">
-                        <span class="song-number">12</span>
+                        <span class="album__song-number">12</span>
                         Quéquette
                     </li>
                     <li class="song amplitude-song-container amplitude-play-pause" data-amplitude-song-index="12">
-                        <span class="song-number">13</span>
+                        <span class="album__song-number">13</span>
                         Tu as 20 ans
                     </li>
                 </ul>
-                <!-- Songs List -->
             </div>
         </div>
     </div>

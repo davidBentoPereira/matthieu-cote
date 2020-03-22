@@ -6,65 +6,151 @@
 @import "~@ecodev/natural-gallery-js/natural-gallery.css";
 @import "~@ecodev/natural-gallery-js/themes/natural.css";
 
+/* Sass Variables */
+$background-color: #171D24;
+$background-color-secondary: #2B3443;
+$main-color: #FFBB51;
+
+/* Sass Mixin */
+@mixin title-font {
+    font-family: "Roboto Light", sans-serif;
+} 
+@mixin text-font {
+    font-family: Roboto, sans-serif;
+} 
+
+
 #content {
-    background-color: #171D24;
-    border-radius: 15px 15px 15px 15px
-    /*background: -webkit-linear-gradient(#171D24, #86a6db);*/
-    /*-webkit-background-clip: text;*/
-    /*!*-webkit-text-fill-color: transparent;*!*/
+    background-color: $background-color;
 }
 
 /*********** NAVBAR ***********/
-.bg-dark-custom {background-color: #2B3443;}
-.navbar-light .navbar-nav .nav-link {
-    color: white;
-    font-family: "Roboto Light", sans-serif;
-    text-transform: uppercase;
+.bg-dark-custom {
+    background-color: $background-color-secondary;
 }
-.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
-    color: #FFBB51;
-    text-shadow: #000000 2px 10px 15px;
+.navbar-light .navbar-nav .nav-link {
+    @include title-font();
+    color: white;
+    text-transform: uppercase;
+    &:focus, &:hover {
+        color: $main-color;
+        text-shadow: #000000 2px 10px 15px;
+    }
 }
 .navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show > .nav-link {
-    color: #FFBB51;
+    color: $main-color;
     text-shadow: #000000 2px 10px 15px;
 }
 /*********** MAIN TITLE ***********/
-#main_title_emphisised {color: #FFBB51;}
+#main_title_emphisised {
+    color: $main-color;
+    text-shadow: #000000 2px 10px 15px;
+    // text-shadow: white 1px 1px;
+}
 
 /*********** GENERAL ***********/
-p, li {color: white;font-family: Roboto, sans-serif}
-h1, h2, h3, h4, h5, h6 {color:white; font-family: "Roboto Light", sans-serif}
-h1 {margin-top: 2em; margin-bottom: 1em;}
-a {color: white;}
-a:hover {color: #FFBB51; text-shadow: #FFBB51 2px 2px 2px; text-decoration: none;}
+p, li {
+    color: white;
+    font-family: Roboto, sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+    @include title-font();
+    color:white;
+}
+h1 {
+    margin-top: 2em;
+    margin-bottom: 1em;
+}
+
+a {
+    color: white;
+    &:hover {
+        color: $main-color; 
+        text-shadow: #000000 2px 10px 15px;
+        text-decoration: none;
+    }
+}
 
 /********** FOOTER ***********/
-footer {
+.footer {
     background-color: #2B3443;
-    border-radius: 15px 15px 0px 0px;
+    // border-radius: 15px 15px 0px 0px;
     position:absolute;
     bottom:0;
     width:100%;
-    height:100px;   /* Height of the footer */
+    // height:100px;
+    &__copyright {
+        font-size: 0.8em;
+        margin-top:1em;
+        margin-bottom: -0.7em;
+    }
 }
-.footer-copyright p {font-size: 0.8em;}
-.corner-round {border-radius: 20px;}
 
-/************ DISCOGRAPHIE ************/
-.song-number {margin-right: 2em;}
-.album {color: #FFBB51; font-family: Roboto, sans-serif}
-.album-title {font-family: Roboto, sans-serif; font-size: 2em; margin-top: -0.5em; margin-bottom:0em;}
-.album-info {margin-top: -0.5em;}
-.secondary {font-family: Roboto, sans-serif; color: white; opacity: 50%;}
-.list-songs { list-style-type: none; padding: 0; line-height: 2.5em;}
-.list-songs li:hover {cursor: pointer;}
-.amplitude-active-song-container  {
-    background-color: #FFBB51;
-    color: #171D24;
-    border-radius: 20px;
-    padding: 0.2em 0.2em 0.2em 1.5em;
-    cursor: pointer;
+/************ Page : DISCOGRAPHIE ************/
+.album {
+    &__label {
+        color: $main-color;
+    }
+    &__title {
+        font-size: 2em;
+        margin-top: -0.5em;
+        margin-bottom:0em;
+    }
+    &__info {
+        margin-top: -0.5em;
+    }
+    &__songs {
+        list-style-type: none;
+        padding: 0;
+        line-height: 2.5em;
+        li:hover {
+            cursor: pointer;
+        }
+    }
+    &__song-number {
+        margin-right: 2em;
+    }
+    .amplitude-active-song-container  {
+        background-color: $main-color;
+        color: #171D24;
+        border-radius: 20px;
+        padding: 0.2em 0.2em 0.2em 1.5em;
+        cursor: pointer;
+    }
+}
+
+.player {
+    &__cover {
+        width: 350px;
+    }
+    &__song-title {
+        font-size:1.2em;
+    }
+    &__audio-controls {
+        background-color:#2B3443;
+        border-radius: 15px;
+        padding:1em;
+    }
+    .amplitude-current-time, .amplitude-duration-time {
+        color:white;
+        margin-top: -0.7em;
+        margin-right: 0.5em;
+        margin-left:0.5em;
+    }
+
+    .icon-play {
+        display: none;
+    }
+    .icon-pause {
+        display: none;
+    }
+    .btn-repeat:active{
+        background-color:red;
+    }
+    /*#play-pause.amplitude-paused {*/
+    /*    background: url("https://521dimensions.com/img/open-source/amplitudejs/blue-player/play.svg"); }*/
+    /*#play-pause.amplitude-playing {*/
+    /*    background: url("https://521dimensions.com/img/open-source/amplitudejs/blue-player/pause.svg"); }*/
 }
 
 /************* Cards **************/
@@ -72,35 +158,15 @@ footer {
     background-color: #2B3443;
     border-radius: 50px;
     border: none;
+    .card-img-top {
+        border-radius: 50px 50px 0px 0px;
+    }
+    .card-title {
+        color: $main-color;
+        text-shadow: #000000 2px 8px 12px;
+    }
+    .card-text {
+        font-size: 0.9em;
+        margin-top: -0.5em;
+    }
 }
-
-.card-img-top {
-    border-radius: 50px 50px 0px 0px;
-}
-
-hr {
-    background-color: white;
-}
-
-/************* Amplitude JS **************/
-/* BTN AUDIO CONTROL */
-.audio-controls {
-    background-color:#2B3443;
-    border-radius: 15px;
-    padding:1em;
-}
-
-.icon-play {
-    display: none;
-}
-.icon-pause {
-    display: none;
-}
-.btn-repeat:active{
-    background-color:red;
-}
-
-/*#play-pause.amplitude-paused {*/
-/*    background: url("https://521dimensions.com/img/open-source/amplitudejs/blue-player/play.svg"); }*/
-/*#play-pause.amplitude-playing {*/
-/*    background: url("https://521dimensions.com/img/open-source/amplitudejs/blue-player/pause.svg"); }*/
