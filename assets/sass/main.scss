@@ -1,0 +1,20 @@
+@import "~bootstrap/scss/bootstrap";
+@import "~@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import "~@fortawesome/fontawesome-free/css/all.css";
+@import "~startbootstrap-sb-admin-2/scss/sb-admin-2";
+
+@import "~@ecodev/natural-gallery-js/natural-gallery.css";
+@import "~@ecodev/natural-gallery-js/themes/natural.css";
+
+/* Variables, Functions, Mixins, Placeholders */
+@import "./utils/variables";
+@import "./utils/mixins";
+/* Base */
+@import "./base/base";
+/* Layout */
+@import "./layout/navbar";
+@import "./layout/footer";
+/* Components */
+@import "./components/cards";
+/* Pages */
+@import "./pages/discographie";

@@ -7,11 +7,19 @@
     "startbootstrap-sb-admin-2": "^4.0.7"
   },
   "devDependencies": {
+    "autoprefixer": "^9.7.5",
     "bootstrap": "^4.4.1",
     "jquery": "^3.4.1",
     "node-sass": "^4.13.1",
     "popper.js": "^1.16.1",
+    "postcss-loader": "^3.0.0",
     "sass-loader": "7.0.1",
     "webpack-notifier": "1.6.0"
-  }
+  },
+  "browserslist": [
+    "defaults",
+    "not IE 11",
+    "not IE_Mob 11",
+    "maintained node versions"
+  ]
 }

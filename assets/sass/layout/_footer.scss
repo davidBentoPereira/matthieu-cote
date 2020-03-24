@@ -1,0 +1,13 @@
+.footer {
+    background-color: #2B3443;
+    // border-radius: 15px 15px 0px 0px;
+    position:absolute;
+    bottom:0;
+    width:100%;
+    // height:100px;
+    &__copyright {
+        font-size: 0.8em;
+        margin-top:1em;
+        margin-bottom: -0.7em;
+    }
+}

@@ -1,0 +1,65 @@
+.album {
+    &__label {
+        color: $main-color;
+    }
+    &__title {
+        font-size: 2em;
+        margin-top: -0.5em;
+        margin-bottom:0em;
+    }
+    &__info {
+        margin-top: -0.5em;
+    }
+    &__songs {
+        list-style-type: none;
+        padding: 0;
+        line-height: 2.5em;
+        li:hover {
+            cursor: pointer;
+        }
+    }
+    &__song-number {
+        margin-right: 2em;
+    }
+    .amplitude-active-song-container  {
+        background-color: $main-color;
+        color: #171D24;
+        border-radius: 20px;
+        padding: 0.2em 0.2em 0.2em 1.5em;
+        cursor: pointer;
+    }
+}
+
+.player {
+    &__cover {
+        width: 350px;
+    }
+    &__song-title {
+        font-size:1.2em;
+    }
+    &__audio-controls {
+        background-color:#2B3443;
+        border-radius: 15px;
+        padding:1em;
+    }
+    .amplitude-current-time, .amplitude-duration-time {
+        color:white;
+        margin-top: -0.7em;
+        margin-right: 0.5em;
+        margin-left:0.5em;
+    }
+
+    .icon-play {
+        display: none;
+    }
+    .icon-pause {
+        display: none;
+    }
+    .btn-repeat:active{
+        background-color:red;
+    }
+    /*#play-pause.amplitude-paused {*/
+    /*    background: url("https://521dimensions.com/img/open-source/amplitudejs/blue-player/play.svg"); }*/
+    /*#play-pause.amplitude-playing {*/
+    /*    background: url("https://521dimensions.com/img/open-source/amplitudejs/blue-player/pause.svg"); }*/
+}
