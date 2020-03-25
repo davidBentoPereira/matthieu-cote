@@ -23,7 +23,7 @@
     }
     .amplitude-active-song-container  {
         background-color: $main-color;
-        color: #171D24;
+        color: $background-color;
         border-radius: 20px;
         padding: 0.2em 0.2em 0.2em 1.5em;
         cursor: pointer;
@@ -38,12 +38,12 @@
         font-size:1.2em;
     }
     &__audio-controls {
-        background-color:#2B3443;
+        background-color:$background-color;
         border-radius: 15px;
         padding:1em;
     }
     .amplitude-current-time, .amplitude-duration-time {
-        color:white;
+        color:$text-color;
         margin-top: -0.7em;
         margin-right: 0.5em;
         margin-left:0.5em;
