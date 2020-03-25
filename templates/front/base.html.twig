@@ -4,7 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- SEO -->
     <title>Ceci n'est pas le site de Matthieu Côte - {% block title %} {% endblock %}</title>
+    <!-- Robots-->
+    <!-- Favicon -->
+    <link rel="icon" href="{{ asset('./img/icons/favicon.png') }}">
+    <!-- CSS -->
     {% block stylesheets %}
         {#    <link href="{{ asset('admin/css/sb-admin-2.min.css') }}" rel="stylesheet">#}
         {{ encore_entry_link_tags('app') }}
